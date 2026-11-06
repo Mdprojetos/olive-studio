@@ -146,6 +146,39 @@ summary .plus{flex:none;width:36px;height:36px;border-radius:50%;border:1px soli
 details[open] summary .plus{transform:rotate(45deg);background:var(--olive-soft)}
 details .ans{color:var(--muted);padding-top:12px;max-width:600px}
 
+/* aniversário */
+.bday{padding:0 0 96px}
+.bday-box{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;background:var(--sage);border-radius:40px;padding:64px 56px}
+.bday-text .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--gold-soft);color:var(--olive-deep);font-size:.82rem;font-weight:700;margin-bottom:22px}
+.bday-text p{color:var(--muted);margin-top:20px;max-width:46ch}
+.perks{list-style:none;display:grid;gap:12px;margin-top:28px}
+.perks li{display:flex;gap:12px;align-items:center;font-weight:600;color:var(--ink-2)}
+.perks .ic{color:var(--olive)}
+.bday-form{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:grid;gap:18px;box-shadow:0 30px 60px -40px rgba(0,0,0,.35)}
+.field label{display:block;font-size:.85rem;font-weight:700;color:var(--ink-2);margin-bottom:6px}
+.field input{width:100%;font:inherit;font-size:1rem;color:var(--ink);padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:#fff;transition:border-color .2s,box-shadow .2s}
+.field input::placeholder{color:#6f7564}
+.field input:focus{outline:none;border-color:var(--olive);box-shadow:0 0 0 4px var(--olive-soft)}
+.field input[aria-invalid="true"]{border-color:#b3261e}
+.field .err{display:none;color:#b3261e;font-size:.8rem;font-weight:600;margin-top:6px}
+.field input[aria-invalid="true"] + .err{display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted);line-height:1.5;cursor:pointer}
+.consent input{flex:none;width:18px;height:18px;margin-top:2px;accent-color:var(--olive)}
+.consent.invalid{color:#b3261e}
+.consent a{color:var(--olive);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+footer a.legal{display:inline;color:var(--muted);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+footer a.legal:hover{color:var(--olive)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.bday-form .btn{width:100%;justify-content:center}
+.bday-form .btn[disabled]{opacity:.6;cursor:wait}
+.form-msg{font-size:.88rem;font-weight:600;color:#b3261e}
+.form-msg:empty{display:none}
+.bday-done{text-align:center;padding:24px 8px}
+.bday-done .ic-wrap{width:64px;height:64px;margin:0 auto 18px;border-radius:20px;display:grid;place-items:center;background:var(--gold-soft);color:var(--olive)}
+.bday-done h3{font-size:2rem;margin-bottom:10px}
+.bday-done p{color:var(--muted)}
+
 /* cta + info */
 .cta{padding:0 0 110px}
 .cta-box{position:relative;overflow:hidden;border-radius:40px;padding:96px 48px;text-align:center;background:var(--olive-deep);color:#f4f6ee}
@@ -188,6 +221,7 @@ footer a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-we
   .float-card{left:0}.float-card.f2{right:0}
   .track{grid-template-columns:1fr 1fr}
   .info{grid-template-columns:1fr}
+  .bday-box{grid-template-columns:1fr;gap:36px;padding:48px 28px}
   .section,.loiros{padding:80px 0}
   .shot{width:140px}
 }
@@ -195,6 +229,9 @@ footer a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-we
   .track{grid-template-columns:1fr}
   .svc-card{min-height:240px}
   .cta-box{padding:64px 22px}
+  .bday-box{padding:36px 16px;border-radius:28px}
+  .bday-form{padding:24px 18px}
+  .two{grid-template-columns:1fr}
   footer{padding-bottom:100px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -219,7 +256,9 @@ footer a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-we
   <symbol id="i-ring" viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9.5 8.5L8 5.5h8l-1.5 3M10 5.5l2-2 2 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
   <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14zM5 19c3-4 6-7 10-9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8.5" width="17" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 12.5V20h14v-7.5M12 8.5V20M12 8.5S10.8 4 8.3 4.3C6.4 4.5 6.6 7.3 8.6 8.1M12 8.5s1.2-4.5 3.7-4.2c1.9.2 1.7 3 -.3 3.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plus"viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </svg>
 
 <nav class="nav" id="nav" aria-label="Principal">
@@ -229,6 +268,7 @@ footer a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-we
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#edilene">Edilene</a></li>
     <li><a href="#avaliacoes">Avaliações</a></li>
+    <li><a href="#aniversario">Aniversário</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <a class="btn btn-primary" href="https://wa.me/5561984863710?text=Ol%C3%A1%2C%20Olive%20Studio!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener">Agendar horário</a>
@@ -345,6 +385,48 @@ footer a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-we
   </div>
 </section>
 
+<section class="bday" id="aniversario">
+  <div class="wrap">
+    <div class="bday-box">
+      <div class="bday-text" data-up>
+        <span class="tag"><svg class="ic"><use href="#i-gift"/></svg>Clube de aniversário</span>
+        <h2>Seu aniversário merece um <i>presente</i>.</h2>
+        <p>Cadastre-se e, no dia do seu aniversário, a Edilene manda uma mensagem especial no seu WhatsApp com um desconto exclusivo para você comemorar no Olive Studio.</p>
+        <ul class="perks">
+          <li><svg class="ic"><use href="#i-check"/></svg>Desconto especial no mês do seu aniversário</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Cadastro rápido, leva menos de 1 minuto</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Sem spam: só uma mensagem por ano</li>
+        </ul>
+      </div>
+      <div data-up>
+        <form class="bday-form" id="bdayForm" method="post" action="#aniversario" novalidate>
+          <div class="field">
+            <label for="bNome">Nome</label>
+            <input id="bNome" type="text" autocomplete="name" placeholder="Como você gostaria de ser chamada" maxlength="80" required aria-describedby="bNomeErr">
+            <span class="err" id="bNomeErr">Digite o seu nome.</span>
+          </div>
+          <div class="two">
+            <div class="field">
+              <label for="bTel">WhatsApp</label>
+              <input id="bTel" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(61) 90000-0000" maxlength="15" required aria-describedby="bTelErr">
+              <span class="err" id="bTelErr">Digite um telefone com DDD.</span>
+            </div>
+            <div class="field">
+              <label for="bNasc">Data de nascimento</label>
+              <input id="bNasc" type="text" inputmode="numeric" autocomplete="bday" placeholder="dd/mm/aaaa" maxlength="10" required aria-describedby="bNascErr">
+              <span class="err" id="bNascErr">Digite uma data válida.</span>
+            </div>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="bSite">Não preencha</label><input id="bSite" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+          <label class="consent" id="bConsentWrap"><input id="bConsent" type="checkbox" required><span>Autorizo o Olive Studio a guardar meus dados e me enviar uma mensagem no WhatsApp no meu aniversário. Posso pedir a exclusão a qualquer momento. Veja a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+          <p class="form-msg" id="bMsg" role="alert"></p>
+          <button class="btn btn-primary" type="submit" id="bBtn"><svg class="ic"><use href="#i-gift"/></svg>Quero meu presente</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta" id="contato">
   <div class="wrap">
     <div class="cta-box" data-up>
@@ -385,16 +467,16 @@ footer a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-we
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr"></span> Olive Studio · Edilene Oliveira · Samambaia Sul – DF</span>
+    <span>© <span id="yr"></span> Olive Studio · Edilene Oliveira · Samambaia Sul – DF · <a class="legal" href="privacidade.html">Política de Privacidade</a></span>
     <a href="https://www.instagram.com/olivestudio_edilenneoliveira/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg>@olivestudio_edilenneoliveira</a>
   </div>
 </footer>
 
 <a class="fab" href="https://wa.me/5561984863710?text=Ol%C3%A1%2C%20Olive%20Studio!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="28" height="28"><use href="#i-wa"/></svg></a>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -434,6 +516,56 @@ footer a{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-we
     const r = c.getBoundingClientRect();
     c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }));
+
+  // clube de aniversário: cadastro enviado para a planilha do Google (ver aniversarios/COMO-CONFIGURAR.md)
+  const BDAY_URL = ''; // URL real removida do exemplo // cole aqui a URL do app da web do Google Apps Script
+  const form = document.getElementById('bdayForm');
+  const fNome = document.getElementById('bNome'), fTel = document.getElementById('bTel'), fNasc = document.getElementById('bNasc');
+  const fConsent = document.getElementById('bConsent'), fMsg = document.getElementById('bMsg'), fBtn = document.getElementById('bBtn');
+  fTel.addEventListener('input', () => {
+    const d = fTel.value.replace(/\D/g, '').slice(0, 11);
+    fTel.value = d.length > 6 ? `(${d.slice(0, 2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}` : d.length > 2 ? `(${d.slice(0, 2)}) ${d.slice(2)}` : d;
+  });
+  fNasc.addEventListener('input', () => {
+    const d = fNasc.value.replace(/\D/g, '').slice(0, 8);
+    fNasc.value = [d.slice(0, 2), d.slice(2, 4), d.slice(4)].filter(Boolean).join('/');
+  });
+  const validDate = v => {
+    const m = v.match(/^(\d{2})\/(\d{2})\/(\d{4})$/); if (!m) return false;
+    const dt = new Date(+m[3], m[2] - 1, +m[1]);
+    return dt.getDate() === +m[1] && dt.getMonth() === m[2] - 1 && +m[3] >= 1900 && dt <= new Date();
+  };
+  const checks = [
+    [fNome, () => fNome.value.trim().length >= 2],
+    [fTel, () => /^\d{10,11}$/.test(fTel.value.replace(/\D/g, ''))],
+    [fNasc, () => validDate(fNasc.value)]
+  ];
+  checks.forEach(([el, ok]) => el.addEventListener('blur', () => { if (el.value) el.setAttribute('aria-invalid', !ok()); }));
+  checks.forEach(([el, ok]) => el.addEventListener('input', () => { if (el.getAttribute('aria-invalid') === 'true' && ok()) el.setAttribute('aria-invalid', 'false'); }));
+  fConsent.addEventListener('change', () => document.getElementById('bConsentWrap').classList.toggle('invalid', !fConsent.checked));
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    fMsg.textContent = '';
+    const bad = checks.filter(([el, ok]) => { el.setAttribute('aria-invalid', !ok()); return !ok(); });
+    document.getElementById('bConsentWrap').classList.toggle('invalid', !fConsent.checked);
+    if (bad.length) { bad[0][0].focus(); return; }
+    if (!fConsent.checked) { fMsg.textContent = 'Marque a autorização para concluir o cadastro.'; fConsent.focus(); return; }
+    if (!BDAY_URL) { fMsg.textContent = 'O cadastro está em manutenção. Chame a gente no WhatsApp (61) 98486-3710.'; return; }
+    fBtn.disabled = true; fBtn.lastChild.textContent = 'Enviando…';
+    try {
+      const res = await fetch(BDAY_URL, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify({
+        nome:fNome.value.trim(), telefone:fTel.value, nascimento:fNasc.value, consentimento:fConsent.checked, site:document.getElementById('bSite').value
+      })});
+      const out = await res.json();
+      if (!out.ok) throw new Error(out.erro || 'falha');
+      const first = fNome.value.trim().split(/\s+/)[0];
+      form.innerHTML = '<div class="bday-done"><span class="ic-wrap"><svg class="ic" style="width:30px;height:30px"><use href="#i-gift"/></svg></span><h3></h3><p>Cadastro feito! No seu aniversário você vai receber uma surpresa da Edilene no WhatsApp.</p></div>';
+      form.querySelector('h3').textContent = `Prontinho, ${first}!`;
+    } catch (err) {
+      fMsg.textContent = 'Não foi possível enviar agora. Tente de novo em instantes ou chame a gente no WhatsApp (61) 98486-3710.';
+      fBtn.disabled = false; fBtn.lastChild.textContent = 'Quero meu presente';
+    }
+  });
 
   if (reduce || !window.gsap) { document.documentElement.classList.add('no-gsap'); return; }
   gsap.registerPlugin(ScrollTrigger);
